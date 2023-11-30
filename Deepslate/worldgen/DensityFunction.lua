@@ -738,7 +738,6 @@ function DensityFunctions.Evaluate(obj,inputParser)
         return Constant.new(obj)
     end
     local root = obj or {}
-   -- Assuming Json.readString, Json.readNumber, and other functions are available
     local str = root.type or ""
     local type = (string.match(str, ":(.*)") or str):gsub("^%s*(.-)%s*$", "%1")
     local result
@@ -800,7 +799,6 @@ function DensityFunctions.Evaluate(obj,inputParser)
     elseif type == 'y_clamped_gradient' then
         result = YClampedGradient.new((root.from_y) or -4064, (root.to_y) or 4062, (root.from_value) or -4064, (root.to_value) or 4062)
     else
-        -- Default value if type doesn't match any cases
         result = Constant.ZERO
     end
     return result
