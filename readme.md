@@ -10,4 +10,7 @@ Test Place: [https://www.roblox.com/games/15502792299/DeepSlate-Test](https://ww
 
 make a copy of it by going to the 3 dots and clicking edit in studio.
 
+If you do plan to use this I highly recommend making custom WorldGen functions. A example is show in studio and in the worldgenExample folder
+(not Deepslate.worldgen)
+
 USE THIS AT YOUR OWN RISK.
