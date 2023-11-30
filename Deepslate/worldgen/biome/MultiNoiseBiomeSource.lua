@@ -1,4 +1,4 @@
-local climate = require(script.Parent.Climate)
+local climate = require(script.Parent.Climate2)
 local MultiNoiseBiomeSource = {}
 MultiNoiseBiomeSource.__index = MultiNoiseBiomeSource
 local Identifier = require(script.Parent.Parent.Parent.core.Identifier)
@@ -21,6 +21,7 @@ function MultiNoiseBiomeSource.Evaluate(obj)
     if type(b) ~= "table" then continue end 
         b = b or {}
         local d = Identifier.parse(b.biome or 'plains')
+        
         table.insert(entries,{climate:GetClass("ParamPoint").Evaluate(b.parameters), function()
             return  d
         end

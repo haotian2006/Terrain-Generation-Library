@@ -1,3 +1,4 @@
+
 local DensityFunction = require(script.Parent.Parent.DensityFunction)
 local size = require(script.Parent.Parent.Parent.math.Utils).Size
 local square = function(x)
@@ -8,7 +9,7 @@ local Climate = {Subtables = {},Children = {}}
 local sub = Climate.Subtables
 Climate.__index = Climate
 Climate.__type = "Climate"
-Climate.IsChildOfClimate = true 
+Climate.IsChildOfClimate = true
 
 function Climate:IsA(type)
     if self.__type == type then return true end 

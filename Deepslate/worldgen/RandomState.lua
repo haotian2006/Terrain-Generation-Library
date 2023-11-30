@@ -13,13 +13,13 @@ local hash = require(script.Parent.Parent.math.Hash)
 local BlendedNoise = require(script.Parent.Parent.math.noise.BlendedNoise)
 local Registry = require(script.Parent.Parent.core.Registry)
 local Identifier = require(script.Parent.Parent.core.Identifier)
-local randomobj = require(script.Parent.Parent.math.RandomObject)
+local Random = require(script.Parent.Parent.math.Random)
 function RandomState.new(settings,seed)
     local a = setmetatable({},RandomState)
     a.seed = seed
     a.noiseCache = {} 
     a.randomCache = {}
-    a.random = randomobj.new(seed):Fork()
+    a.random = Random.new(seed):Fork()
     a.SurfaceSystem = SurfaceSystem --//TODO
     a.router = NoiseRouter.mapAll(settings.noiseRouter,a:createVisitor(settings.noise,settings.legacyRandomSource))
     a.biomes = settings.biome_source or {}

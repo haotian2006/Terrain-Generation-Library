@@ -1,36 +1,36 @@
-local RandomObj = {}
-RandomObj.__index = RandomObj
+local myRandom = {}
+myRandom.__index = myRandom
 
 local Hash = require(script.Parent.Parent.math.Hash)
-function RandomObj.new(seed,obj)
-    local self = setmetatable({}, RandomObj)
+function myRandom.new(seed,obj)
+    local self = setmetatable({}, myRandom)
     self.random = obj or Random.new(seed)
     self.seed = seed
     return self
 end
 
-function RandomObj:NextNumber(...)
+function myRandom:NextNumber(...)
     return self.random:NextNumber(...)
 end
-function RandomObj:NextInteger(...)
+function myRandom:NextInteger(...)
     return self.random:NextInteger(...)
 end
-function RandomObj:Consume(x)
+function myRandom:Consume(x)
     local new = self:Fork()
     for i = 1,x do
         new:NextNumber()
     end
     return new
 end
-function RandomObj:Clone()
+function myRandom:Clone()
     local rc = self.random:Clone()
     return self.new(self.seed,rc)
 end
-function RandomObj:Fork()
+function myRandom:Fork()
     return self.new(self.seed)
 end
-function RandomObj:FromHashOf(hash)
+function myRandom:FromHashOf(hash)
     return self.new(Hash.generateSeedFromString(hash,self.seed))
 end
 
-return RandomObj
+return myRandom

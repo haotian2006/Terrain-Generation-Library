@@ -1,5 +1,5 @@
 local Identifier = {}
-Identifier.DEFAULT_NAMESPACE = 'c'
+Identifier.DEFAULT_NAMESPACE = 'minecraft'
 Identifier.SEPARATOR = ':'
 Identifier.__index = Identifier
 function Identifier.new(namespace, path)
