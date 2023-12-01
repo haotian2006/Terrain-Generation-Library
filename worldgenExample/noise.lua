@@ -14,8 +14,6 @@ return  {
     foliageNoise = {
         amplitudes = {.03 },
         firstOctave = -1,
-        useNormal = nil, -- 2x the performance
-        offset = nil
     },
     erosion = {
         amplitudes = { 1.0, 1.0, 0.0, 1.0, 1.0 },
