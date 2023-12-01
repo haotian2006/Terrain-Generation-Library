@@ -1,5 +1,5 @@
 local SimplexNoise = {}
-
+-- Math.noise replaces this 
 SimplexNoise.GRADIENT = {
     {1, 1, 0}, {-1, 1, 0}, {1, -1, 0}, {-1, -1, 0},
     {1, 0, 1}, {-1, 0, 1}, {1, 0, -1}, {-1, 0, -1},

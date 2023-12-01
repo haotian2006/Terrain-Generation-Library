@@ -29,7 +29,7 @@ end
 
 function ImprovedNoise:sample(x, y, z, yScale, yLimit)
     if not (yScale or yLimit) then
-        return math.noise(x+self.xo,y+self.yo,z+self.zo)
+        return math.noise(x+self.xo,y+self.yo,z+self.zo) -- way faster to just use roblox's math.noise here rather then recalculating 
     end
     local x2 = x + self.xo
     local y2 = y + self.yo

@@ -1,4 +1,4 @@
-local climate = require(script.Parent.Climate2)
+local climate = require(script.Parent.Climate)
 local MultiNoiseBiomeSource = {}
 MultiNoiseBiomeSource.__index = MultiNoiseBiomeSource
 local Identifier = require(script.Parent.Parent.Parent.core.Identifier)
