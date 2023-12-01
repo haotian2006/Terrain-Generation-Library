@@ -19,9 +19,10 @@ worldgenExample folder (not Deepslate's worldgen)
 you can also create custom functions here: [https://misode.github.io/worldgen/density-function/](https://misode.github.io/worldgen/density-function/)
 (use a json to lua table converter to convert it to a table format)
 
-USE THIS AT YOUR OWN RISK.
-
 also fyi I do not have any plans to update this library
+
+## USE THIS AT YOUR OWN RISK.
+
 ## Images:
 
 ### Density Functions:
