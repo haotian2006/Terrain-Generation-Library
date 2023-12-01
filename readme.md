@@ -41,3 +41,5 @@ minecraft:offset
 minecraft:cheese_cave
 ![Alt text](https://github.com/haotian2006/Terrain-Generation-Library/blob/main/Images/cheesecave.png?raw=true)
 
+custom settings
+![Alt text](https://github.com/haotian2006/Terrain-Generation-Library/blob/main/Images/custom.png?raw=true)
