@@ -21,6 +21,7 @@ you can also create custom functions here: [https://misode.github.io/worldgen/de
 
 USE THIS AT YOUR OWN RISK.
 
+also fyi I do not have any plans to update this library
 ## Images:
 
 ### Density Functions:
