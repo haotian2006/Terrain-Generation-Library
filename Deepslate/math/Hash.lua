@@ -9,7 +9,6 @@ local function simpleHash(str)
     return hash
 end
 
--- Function to generate a new seed based on a string and a seed
 function hash.generateSeedFromString(str, seed)
     seed = seed or 0
     local hashValue = simpleHash(str)
