@@ -1,19 +1,20 @@
 local hash = {}
-local function simpleHash(str)
+local function jenkins_hash(key)
     local hash = 0
-    local len = string.len(str)
-    for i = 1, len do
-        local byteValue = string.byte(str, i)
-        hash = (hash * 31 + byteValue) % 2^32
+    for i = 1, #key do
+        hash = hash + string.byte(key, i)
+        hash = hash + bit32.lshift(hash, 10)
+        hash = bit32.bxor(hash, bit32.rshift(hash, 6))
     end
+    hash = hash + bit32.lshift(hash, 3)
+    hash = bit32.bxor(hash, bit32.rshift(hash, 11))
+    hash = hash + bit32.lshift(hash, 15)
     return hash
 end
 
 function hash.generateSeedFromString(str, seed)
     seed = seed or 0
-    local hashValue = simpleHash(str)
-    local newSeed = bit32.bxor(seed, hashValue)
-    return newSeed
+    return jenkins_hash(`{str}_{seed}`)
 end
 return hash
 
